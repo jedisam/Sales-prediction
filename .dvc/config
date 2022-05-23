@@ -1,0 +1,4 @@
+[core]
+    remote = lremote
+['remote "lremote"']
+    url = /tmp/dvc
