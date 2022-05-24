@@ -1,4 +1,4 @@
-"""Logg messages to a file."""
+"""Log messages to a file."""
 
 import logging
 
