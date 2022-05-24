@@ -78,3 +78,55 @@
 05-24-2022 06:10:47 : INFO : logger : Joining two Dataframes
 05-24-2022 06:10:59 : INFO : logger : Converting Column to Datetime
 05-24-2022 06:11:04 : INFO : logger : Extracting Fields from Date Column
+05-24-2022 11:14:29 : INFO : logger : Successfully Instantiated load_data Class Object
+05-24-2022 11:14:29 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-24-2022 11:14:29 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 11:17:02 : INFO : logger : Plotting a subplots
+05-24-2022 11:17:05 : INFO : logger : Plotting a subplots
+05-24-2022 11:17:07 : INFO : logger : Plotting multiple histogram
+05-24-2022 11:17:17 : INFO : logger : Plotting a bar chart
+05-24-2022 11:17:31 : INFO : logger : Plotting a bar chart
+05-24-2022 11:18:21 : INFO : logger : Plotting a scatter plot
+05-24-2022 11:18:26 : INFO : logger : Plotting a scatter matrix
+05-24-2022 11:19:03 : INFO : logger : Plotting a scatter plot
+05-24-2022 11:19:22 : INFO : logger : Plotting a scatter plot
+05-24-2022 11:19:49 : INFO : logger : Plotting a scatter matrix
+05-24-2022 12:09:31 : INFO : logger : Plotting a histogram
+05-24-2022 12:09:45 : INFO : logger : Plotting a histogram
+05-24-2022 12:09:45 : INFO : logger : Plotting a histogram
+05-24-2022 12:16:38 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:16:46 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:17:16 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:17:21 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:20:02 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:20:26 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:20:30 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:21:52 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:22:07 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:22:23 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:22:29 : INFO : logger : Plotting multiple histogram
+05-24-2022 12:22:32 : INFO : logger : Plotting multiple histogram
+05-24-2022 20:27:28 : INFO : logger : Successfully Instantiated load_data Class Object
+05-24-2022 20:27:28 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-24-2022 20:27:28 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 20:30:39 : INFO : logger : Plotting a subplots
+05-24-2022 20:31:00 : INFO : logger : Plotting a subplots
+05-24-2022 20:33:19 : INFO : logger : Plotting multiple histogram
+05-24-2022 20:33:24 : INFO : logger : Plotting multiple histogram
+05-24-2022 20:33:30 : INFO : logger : Plotting a bar chart
+05-24-2022 20:39:32 : INFO : logger : Plotting a subplots
+05-24-2022 20:57:30 : INFO : logger : Plotting a bar chart
+05-24-2022 20:57:35 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:00:13 : INFO : logger : Plotting a scatter matrix
+05-24-2022 21:00:44 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:01:04 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:01:21 : INFO : logger : Plotting a scatter matrix
+05-24-2022 21:01:56 : INFO : logger : Plotting multiple histogram
+05-24-2022 21:02:02 : INFO : logger : Plotting multiple histogram
+05-24-2022 21:02:10 : INFO : logger : Plotting multiple histogram
+05-24-2022 21:02:45 : INFO : logger : Plotting multiple histogram
+05-24-2022 21:42:02 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:42:37 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:42:53 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:51:29 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:51:38 : INFO : logger : Plotting a scatter plot
