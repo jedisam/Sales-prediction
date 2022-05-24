@@ -100,7 +100,7 @@ class Preprocess:
         label_encoded_columns = pd.concat(label_encoded_columns, axis=1)
         return label_encoded_columns
 
-    def join(self, df1, df2, on, how="inner"):
+    def join_dataframes(self, df1, df2, on, how="inner"):
         """Join two dataframes."""
         try:
             self.logger.info('Joining two Dataframes')
@@ -108,4 +108,19 @@ class Preprocess:
         except Exception:
             self.logger.exception(
                 'Failed to join two Dataframes')
+            sys.exit(1)
+
+    def extract_fields_date(self, df, date_column):
+        """Extract fields from date column."""
+        try:
+            self.logger.info('Extracting Fields from Date Column')
+            df['Year'] = df[date_column].dt.year
+            df['Month'] = df[date_column].dt.month
+            df['Day'] = df[date_column].dt.day
+            df['DayOfWeek'] = df[date_column].dt.dayofweek
+
+            return df
+        except Exception:
+            self.logger.exception(
+                'Failed to Extract Fields from Date Column')
             sys.exit(1)
