@@ -152,6 +152,22 @@ class Plot:
         plt.show()
 
     # function to get the values in a plot
+    def plot_hist_2d(self, df1: pd.DataFrame, df2: pd.DataFrame, x_col: str, y_col: str, title: str, label1, label2) -> None:
+        """Plot multiple histograms of the data.
+
+        Args:
+            df(pd.DataFrame): Dataframe to be plotted.
+            x_col(str): column to be plotted.
+        """
+        sns.set()
+        plt.hist(df1[x_col], color='black', alpha=0.3, label=label1)
+        plt.hist(df2[y_col], color='red', alpha=0.3, label=label2)
+        plt.legend()
+        plt.plot()
+        plt.title(title, size=20)
+        self.logger.info(
+            'Plotting multiple histogram')
+        plt.show()
 
     def get_value(self, figure):
         """Get values in a plot.
