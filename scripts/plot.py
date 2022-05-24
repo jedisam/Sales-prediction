@@ -215,7 +215,7 @@ class Plot:
             'Plotting a scatter matrix')
         scatter_matrix(df, alpha=0.2, figsize=(12, 7), diagonal='kde')
         # plt.show()
-        
+
     def plot_subplots(self, x: str, y: str, xtitle: str, ytitle: str) -> None:
         """Plot the subplots of the data.
 
@@ -233,3 +233,11 @@ class Plot:
         self.logger.info(
             'Plotting a subplots')
         plt.show()
+
+    def plot_hist_muli(self, df):
+        """Plot multiple Histogram."""
+        sns.set()
+        num_feats = list(df.select_dtypes(
+            include=['int64', 'float64', 'int32']).columns)
+        self.logger.info("Plotting multiple histogram")
+        df[num_feats].hist(figsize=(20, 15))
