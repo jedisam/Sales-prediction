@@ -215,3 +215,21 @@ class Plot:
             'Plotting a scatter matrix')
         scatter_matrix(df, alpha=0.2, figsize=(12, 7), diagonal='kde')
         # plt.show()
+        
+    def plot_subplots(self, x: str, y: str, xtitle: str, ytitle: str) -> None:
+        """Plot the subplots of the data.
+
+        Args:
+            df(pd.DataFrame): Dataframe to be plotted.
+            title(str): title of chart.
+        """
+        sns.set(style="whitegrid")
+        fig, axes = plt.subplots(nrows=1, ncols=2)
+        fig.set_size_inches(25, 8)
+        x.hist(ax=axes[0], alpha=0.3, color='red', bins=20)
+        y.hist(ax=axes[1], alpha=0.3, color='blue', bins=20)
+        axes[0].set_title(xtitle, size=20)
+        axes[1].set_title(ytitle, size=20)
+        self.logger.info(
+            'Plotting a subplots')
+        plt.show()
