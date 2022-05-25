@@ -1,4 +1,4 @@
 outs:
-- md5: 1e903321a99fbe3330e1d2acb94540d3
-  size: 3356139
+- md5: d6851f17e1531046b458f96522ff1938
+  size: 2904166
   path: test_joined.csv
