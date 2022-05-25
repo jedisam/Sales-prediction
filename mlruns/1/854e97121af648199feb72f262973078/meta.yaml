@@ -1,0 +1,15 @@
+artifact_uri: file:///home/jedi/Documents/Tenacademy/Week3/sales-prediction/mlruns/1/854e97121af648199feb72f262973078/artifacts
+end_time: 1653510856509
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 854e97121af648199feb72f262973078
+run_uuid: 854e97121af648199feb72f262973078
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1653510856487
+status: 4
+tags: []
+user_id: jedi
