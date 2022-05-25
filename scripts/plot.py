@@ -152,6 +152,22 @@ class Plot:
         plt.show()
 
     # function to get the values in a plot
+    def plot_hist_2d(self, df1: pd.DataFrame, df2: pd.DataFrame, x_col: str, y_col: str, title: str, label1, label2) -> None:
+        """Plot multiple histograms of the data.
+
+        Args:
+            df(pd.DataFrame): Dataframe to be plotted.
+            x_col(str): column to be plotted.
+        """
+        sns.set()
+        plt.hist(df1[x_col], color='black', alpha=0.3, label=label1)
+        plt.hist(df2[y_col], color='red', alpha=0.3, label=label2)
+        plt.legend()
+        plt.plot()
+        plt.title(title, size=20)
+        self.logger.info(
+            'Plotting multiple histogram')
+        plt.show()
 
     def get_value(self, figure):
         """Get values in a plot.
@@ -215,7 +231,7 @@ class Plot:
             'Plotting a scatter matrix')
         scatter_matrix(df, alpha=0.2, figsize=(12, 7), diagonal='kde')
         # plt.show()
-        
+
     def plot_subplots(self, x: str, y: str, xtitle: str, ytitle: str) -> None:
         """Plot the subplots of the data.
 
@@ -233,3 +249,11 @@ class Plot:
         self.logger.info(
             'Plotting a subplots')
         plt.show()
+
+    def plot_hist_muli(self, df):
+        """Plot multiple Histogram."""
+        sns.set()
+        num_feats = list(df.select_dtypes(
+            include=['int64', 'float64', 'int32']).columns)
+        self.logger.info("Plotting multiple histogram")
+        df[num_feats].hist(figsize=(20, 15))
