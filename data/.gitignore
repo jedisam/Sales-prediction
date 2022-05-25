@@ -4,3 +4,5 @@
 /sample_submission.csv
 /train_joined.csv
 /test_joined.csv
+/train_processed.csv
+/test_processed.csv
