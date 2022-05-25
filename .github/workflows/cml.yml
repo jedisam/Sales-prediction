@@ -1,4 +1,4 @@
-name: model-smartad-decision-tree
+name: sales-prediction-cml
 on: [push]
 jobs:
   run:
@@ -20,7 +20,7 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
-          python train/random_forest.py.py
+          python train/random_forest.py
       - name: Write CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
