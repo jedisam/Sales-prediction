@@ -110,6 +110,17 @@ class Preprocess:
                 'Failed to join two Dataframes')
             sys.exit(1)
 
+    # check if it's weekend
+    def is_weekend(self, date):
+        """Check if it's weekend."""
+        try:
+            self.logger.info('Checking if it\'s weekend')
+            return 1 if (date.weekday() > 4 or date.weekday() < 1) else 0
+        except Exception:
+            self.logger.exception(
+                'Failed to Check if it\'s weekend')
+            sys.exit(1)
+
     def extract_fields_date(self, df, date_column):
         """Extract fields from date column."""
         try:
@@ -118,9 +129,83 @@ class Preprocess:
             df['Month'] = df[date_column].dt.month
             df['Day'] = df[date_column].dt.day
             df['DayOfWeek'] = df[date_column].dt.dayofweek
-
+            df['weekday'] = df[date_column].dt.weekday
+            df['weekofyear'] = df[date_column].dt.weekofyear
+            df['weekend'] = df[date_column].apply(self.is_weekend)
             return df
         except Exception:
             self.logger.exception(
                 'Failed to Extract Fields from Date Column')
+            sys.exit(1)
+
+    def get_missing_data_percentage(self, df):
+        """Get missing data percentage."""
+        try:
+            self.logger.info('Getting Missing Data Percentage')
+            total = df.isnull().sum().sort_values(ascending=False)
+            percent_1 = total/df.isnull().count()*100
+            percent_2 = (round(percent_1, 1)).sort_values(ascending=False)
+            missing_data = pd.concat(
+                [total, percent_2], axis=1, keys=['Total', '%'])
+            return missing_data
+        except Exception:
+            self.logger.exception(
+                'Failed to Get Missing Data Percentage')
+            sys.exit(1)
+
+    def fill_missing_median(self, df, columns):
+        """Fill missing data with median."""
+        try:
+            self.logger.info('Filling Missing Data with Median')
+            for col in columns:
+                df[col] = df[col].fillna(df[col].median())
+            return df
+        except Exception:
+            self.logger.exception(
+                'Failed to Fill Missing Data with Median')
+            sys.exit(1)
+
+    def fill_missing_with_zero(self, df, columns):
+        """Fill missing data with zero."""
+        try:
+            self.logger.info('Filling Missing Data with Zero')
+            for col in columns:
+                df[col] = df[col].fillna(0)
+            return df
+        except Exception:
+            self.logger.exception(
+                'Failed to Fill Missing Data with Zero')
+            sys.exit(1)
+
+    def fill_missing_mode(self, df, columns):
+        """Fill missing data with mode."""
+        try:
+            self.logger.info('Filling Missing Data with Mode')
+            for col in columns:
+                df[col] = df[col].fillna(df[col].mode()[0])
+            return df
+        except Exception:
+            self.logger.exception(
+                'Failed to Fill Missing Data with Mode')
+            sys.exit(1)
+
+    def replace_outliers_iqr(self, df, columns):
+        """Replace outlier data with IQR."""
+        try:
+            self.logger.info('Replacing Outlier Data with IQR')
+            for col in columns:
+                Q1, Q3 = df[col].quantile(
+                    0.25), df[col].quantile(0.75)
+                IQR = Q3 - Q1
+                cut_off = IQR * 1.5
+                lower, upper = Q1 - cut_off, Q3 + cut_off
+
+                df[col] = np.where(
+                    df[col] > upper, upper, df[col])
+                df[col] = np.where(
+                    df[col] < lower, lower, df[col])
+            return df
+        except Exception:
+            self.logger.exception(
+                'Failed to Replace Outlier Data with IQR')
             sys.exit(1)
