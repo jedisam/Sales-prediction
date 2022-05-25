@@ -101,4 +101,38 @@
 05-24-2022 21:42:37 : INFO : logger : Plotting a scatter plot
 05-24-2022 21:42:53 : INFO : logger : Plotting a scatter plot
 05-24-2022 21:51:29 : INFO : logger : Plotting a scatter plot
-05-24-2022 21:51:38 : INFO : logger : Plotting a scatter plot
+05-24-2022 21:51:38 : INFO : logger : Plotting a scatter plot05-24-2022 23:24:27 : INFO : logger : Successfully Instantiated load_data Class Object
+05-24-2022 23:24:27 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-24-2022 23:24:27 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 23:24:27 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 23:29:33 : INFO : logger : Plotting a subplots
+05-24-2022 23:29:33 : INFO : logger : Plotting a subplots
+05-24-2022 23:29:37 : INFO : logger : Plotting a subplots
+05-24-2022 23:29:37 : INFO : logger : Plotting a subplots
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated load_data Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated load_data Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 23:31:15 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-24-2022 23:34:28 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:28 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:28 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:40 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:40 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:40 : INFO : logger : Plotting multiple histogram
+05-24-2022 23:34:50 : INFO : logger : Plotting a subplots
+05-24-2022 23:34:50 : INFO : logger : Plotting a subplots
+05-24-2022 23:34:50 : INFO : logger : Plotting a subplots
+05-24-2022 23:37:30 : INFO : logger : Plotting a bar chart
+05-24-2022 23:37:30 : INFO : logger : Plotting a bar chart
+05-24-2022 23:37:30 : INFO : logger : Plotting a bar chart
+05-24-2022 23:38:38 : INFO : logger : Plotting a bar chart
+05-24-2022 23:38:38 : INFO : logger : Plotting a bar chart
+05-24-2022 23:38:38 : INFO : logger : Plotting a bar chart
+05-24-2022 23:39:48 : INFO : logger : Plotting a bar chart
+05-24-2022 23:39:48 : INFO : logger : Plotting a bar chart
+05-24-2022 23:39:48 : INFO : logger : Plotting a bar chart
+05-25-2022 08:24:24 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-25-2022 08:28:36 : INFO : logger : Plotting a profile for the dataset: 
