@@ -30,6 +30,6 @@ jobs:
         run: |
           # Post reports as comments in GitHub PRs
           # Random Forest Regressor
-          echo "Hello" > metrics.md
+          echo "Hello" > report.md
           
           cml-send-comment report.md
