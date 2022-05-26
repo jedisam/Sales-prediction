@@ -1,6 +1,6 @@
 import sys
 import logging
-import mlflow
+# import mlflow
 from urllib.parse import urlparse
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import LabelEncoder
@@ -25,18 +25,18 @@ import os
 
 data = pd.read_csv('data/train_processed.csv', sep=',')
 
-mlflow.set_experiment('Sales Prediction')
+# mlflow.set_experiment('Sales Prediction')
 
 if __name__ == '__main__':
-    # with mlflow.start_run():
+    with mlflow.start_run():
     warnings.filterwarnings("ignore")
-    mlflow.log_param('model_parameters', 'n_estimators=100')
+    # mlflow.log_param('model_parameters', 'n_estimators=100')
 
-    mlflow.log_param('data_url', data)
-    mlflow.log_param('input_rows', data.shape[0])
-    mlflow.log_param('input_cols', data.shape[1])
-    mlflow.log_param('model_type', 'Decision Tree')
-    mlflow.log_param('model_parameters', 'n_estimators=40')
+    # mlflow.log_param('data_url', data)
+    # mlflow.log_param('input_rows', data.shape[0])
+    # mlflow.log_param('input_cols', data.shape[1])
+    # mlflow.log_param('model_type', 'Decision Tree')
+    # mlflow.log_param('model_parameters', 'n_estimators=40')
 
     data.drop(['Unnamed: 0'], axis=1, inplace=True)
     data.set_index('Date', inplace=True)
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     pipeline = Pipeline(steps=[
         ('preprocessor', data_transformer), ('regressor',
-                                             RandomForestRegressor(n_estimators=10, random_state=42))
+                                             RandomForestRegressor(n_estimators=90, random_state=42))
     ])
 
     rf_model = pipeline.fit(X_train, y_train)
