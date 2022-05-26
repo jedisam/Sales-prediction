@@ -24,3 +24,7 @@
 05-25-2022 08:34:44 : INFO : logger : Converting Column to Datetime
 05-25-2022 08:53:19 : INFO : logger : Extracting Fields from Date Column
 05-25-2022 08:53:19 : INFO : logger : Extracting Fields from Date Column
+05-25-2022 18:33:23 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-25-2022 18:33:23 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-25-2022 18:33:31 : INFO : logger : Joining two Dataframes
+05-25-2022 18:33:31 : INFO : logger : Joining two Dataframes
