@@ -16,7 +16,7 @@ class Preprocess:
     def __init__(self) -> None:
         """Initilize class."""
         try:
-            pass
+            # pass
             self.logger = Logger("preprocess.log").get_app_logger()
             self.logger.info(
                 'Successfully Instantiated preprocess Class Object')
@@ -48,6 +48,14 @@ class Preprocess:
             self.logger.exception(
                 'Failed to get Categorical Columns from Dataframe')
             sys.exit(1)
+
+    def drop_duplicate(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Drop duplicate rows."""
+        self.logger.info('Dropping duplicate row')
+        df = df.drop_duplicates(subset='Date')
+
+        # self.convert_to_datetime(self.df)
+        return df
 
     def get_missing_values(self, df):
         """Get missing values from dataframe."""

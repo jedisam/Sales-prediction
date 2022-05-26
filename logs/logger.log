@@ -171,3 +171,15 @@
 05-25-2022 08:24:24 : INFO : logger : Successfully Instantiated preprocess Class Object
 05-25-2022 08:24:24 : INFO : logger : Successfully Instantiated Preprocessing Class Object
 05-25-2022 08:28:36 : INFO : logger : Plotting a profile for the dataset: 
+05-25-2022 18:33:23 : INFO : logger : Successfully Instantiated load_data Class Object
+05-25-2022 18:33:23 : INFO : logger : Successfully Instantiated preprocess Class Object
+05-25-2022 18:33:23 : INFO : logger : Successfully Instantiated Preprocessing Class Object
+05-25-2022 18:33:31 : INFO : logger : Joining two Dataframes
+05-25-2022 18:33:31 : INFO : logger : Joining two Dataframes
+05-25-2022 19:25:55 : INFO : logger : Successfully Instantiated load_data Class Object
+05-25-2022 19:49:38 : INFO : logger : Successfully Instantiated load_data Class Object
+05-25-2022 20:40:35 : INFO : logger : Successfully Instantiated load_data Class Object
+05-25-2022 20:51:22 : INFO : logger : Successfully Instantiated load_data Class Object
+05-25-2022 21:53:53 : INFO : logger : Successfully Instantiated load_data Class Object
+05-26-2022 09:33:24 : INFO : logger : Successfully Instantiated load_data Class Object
+05-26-2022 10:03:03 : INFO : logger : Successfully Instantiated load_data Class Object
