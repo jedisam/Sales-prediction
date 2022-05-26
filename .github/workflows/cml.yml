@@ -21,8 +21,8 @@ jobs:
           GDRIVE_CREDENTIALS_DATA: ${{secrets.GDRIVE_CRED}}
         run: |
           # Your ML workflow goes here
-          dvc pull data/train_processed.csv
           pip install -r requirements.txt
+          dvc pull data/train_processed.csv
           python train/random_forest.py
       - name: Write CML report
         env:
