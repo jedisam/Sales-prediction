@@ -1,9 +1,0 @@
-[core]
-    remote = gremote
-['remote "lremote"']
-    url = /tmp/dvc
-['remote "gremote"']
-    url = gdrive://1obxrqyW92OGefsXD51RVPY_XeXXFPqmN
-    gdrive_client_id = 182801407476-nsnnv93bt602rpi43jvv806bvcghum23.apps.googleusercontent.com
-    gdrive_client_secret = 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
-    gdrive_use_service_account = true
