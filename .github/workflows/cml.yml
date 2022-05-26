@@ -31,5 +31,5 @@ jobs:
           # Post reports as comments in GitHub PRs
           # Random Forest Regressor
           echo "### Model Metrics" > report.md
-          # cat train/metrics.txt >> report.md
+          
           cml-send-comment report.md
