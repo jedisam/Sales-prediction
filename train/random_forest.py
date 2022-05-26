@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
     pipeline = Pipeline(steps=[
         ('preprocessor', data_transformer), ('regressor',
-                                             RandomForestRegressor(n_estimators=90, random_state=42))
+                                             RandomForestRegressor(n_estimators=10, random_state=42))
     ])
 
     rf_model = pipeline.fit(X_train, y_train)
