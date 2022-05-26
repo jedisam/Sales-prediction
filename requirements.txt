@@ -12,3 +12,4 @@ sklearn==0.0
 gdrivefs
 mlflow
 pytest
+pydrive2
