@@ -1,8 +1,6 @@
 import sys
 import logging
 # import mlflow
-from urllib.parse import urlparse
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import ElasticNet, LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -14,7 +12,6 @@ from sklearn.ensemble import RandomForestRegressor
 
 import numpy as np
 import pandas as pd
-import dvc.api
 import sys
 import warnings
 import os
@@ -28,7 +25,7 @@ data = pd.read_csv('data/train_processed.csv', sep=',')
 # mlflow.set_experiment('Sales Prediction')
 
 if __name__ == '__main__':
-    with mlflow.start_run():
+    # with mlflow.start_run():
     warnings.filterwarnings("ignore")
     # mlflow.log_param('model_parameters', 'n_estimators=100')
 
