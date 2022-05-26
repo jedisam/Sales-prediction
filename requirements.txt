@@ -13,3 +13,4 @@ gdrivefs
 mlflow
 pytest
 pydrive2
+dvc[all]
