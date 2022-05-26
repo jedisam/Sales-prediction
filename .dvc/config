@@ -1,4 +1,6 @@
 [core]
-    remote = lremote
+    remote = gremote
 ['remote "lremote"']
     url = /tmp/dvc
+['remote "gremote"']
+    url = gdrive://1obxrqyW92OGefsXD51RVPY_XeXXFPqmN
