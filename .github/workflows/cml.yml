@@ -22,7 +22,7 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
-          dvc pull data/train_processed.csv
+          dvc pull -f
           python train/random_forest.py
       - name: Write CML report
         env:
