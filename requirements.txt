@@ -13,5 +13,6 @@ gdrivefs
 mlflow
 pytest
 pydrive2
+pydrive
 dvc[all]
 oauth2client==3.0.0
