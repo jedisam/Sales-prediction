@@ -29,7 +29,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
         run: |
           # Post reports as comments in GitHub PRs
-          # Logistic Regression
+          # Random Forest Regression
           echo "### Model Metrics" > report.md
           cat train/metrics.txt >> report.md
           cml-send-comment report.md
