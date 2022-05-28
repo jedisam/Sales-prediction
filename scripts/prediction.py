@@ -19,12 +19,13 @@ class Prediction:
             sys.exit(1)
 
     def allowed_file(self, filename):
+        """Allowed file."""
         ALLOWED_EXTENSIONS = {'csv'}
         return '.' in filename and \
             filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
     def preprocess(self, path):
-        """."""
+        """Preprocess data."""
         try:
             data = pd.read_csv(path, parse_dates=True, index_col="Date")
             data['Year'] = data.index.year
@@ -38,6 +39,7 @@ class Prediction:
             sys.exit(1)
 
     def handle_df_upload(self, request, secure_filename, app):
+        """Handle upload."""
         if request.method == 'POST':
             if 'file' not in request.files:
                 # flash('No file part')
@@ -70,6 +72,7 @@ class Prediction:
             return {"status": "fail", "error": "Get request not available yet"}
 
     def predict(self, df):
+        """Predict using pickle model."""
         cols = ['StateHoliday', 'Store', 'DayOfWeek', 'Open', 'Promo',
                 'SchoolHoliday', 'Year', 'Month', 'Day', 'WeekOfYear']
         loaded_model = pickle.load(
