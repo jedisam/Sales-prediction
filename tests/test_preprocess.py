@@ -38,23 +38,23 @@ class TESTPHARMASALES(unittest.TestCase):
 
     def test_convert_to_datetime(self):
         """Test convert to datetime module."""
-        df = Preprocess().convert_to_datetime()
+        df = Preprocess().convert_to_datetime(self.df, 'Date')
         assert type(df['Date'][0]) is Timestamp
         
     def test_get_numerical_columns(self):
         """Test get numerical columns module."""
         df = Preprocess().get_numerical_columns(self.df)
-        assert df == ['Sales', 'Store', 'Customers', 'Open', 'SchoolHoliday', 'StateHoliday', 'CompetitionDistance', 'CompetitionOpenSinceMonth', 'Year', 'weekOfyear']
+        assert df == ['Store', 'DayOfWeek', 'Sales', 'Customers', 'Open', 'SchoolHoliday', 'StateHoliday', 'CompetitionDistance', 'CompetitionOpenSinceMonth', 'Year', 'weekOfyear']
         
     def test_get_categorical_columns(self):
         """Test get categorical columns module."""
         df = Preprocess().get_categorical_columns(self.df)
-        assert df == ['StoreType', 'StoreType', 'Assortment']
+        assert df == ['Date', 'StoreType', 'Assortment']
 
     def test_drop_duplicate(self):
         """Test convert to datetime module."""
-        df = Clean_Tweets().drop_duplicate(self.df)
-        assert df.shape[0] == 2
+        df = Preprocess().drop_duplicate(self.df)
+        assert df.shape[0] == 1
 
 
 if __name__ == '__main__':
