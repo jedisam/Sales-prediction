@@ -2,7 +2,9 @@ docker==5.0.3
 dvc==2.10.2
 dvc-render==0.0.5
 gdrivefs==0.14.13
-gensim==4.1.2
+flask
+flask_cors
+gevent
 gitdb==4.0.9
 GitPython==3.1.27
 google-api-core==2.7.3
