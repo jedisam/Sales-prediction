@@ -54,9 +54,20 @@ class Prediction:
                     app.config['UPLOAD_FOLDER'], file_name)
                 data = self.preprocess(full_path)
                 print(data)
-                results = self.predict(data)
-                print("----------_THE RESULTS_________--------:", results)
-                return {"status": "success", "data": results}
+                try:
+                    results = self.predict(data)
+                    dates = data.index.values
+                    dates = dates.astype(str).tolist()
+                    sales = list(results)
+                    data = {
+                        "Date": dates,
+                        "Sales": sales
+                    }
+                    return data
+                except Exception:
+                    return {"status": "fail", "error": "Failed to predict"}
+        elif request.method == 'GET':
+            return {"status": "fail", "error": "Get request not available yet"}
 
     def predict(self, df):
         cols = ['StateHoliday', 'Store', 'DayOfWeek', 'Open', 'Promo',
@@ -68,8 +79,10 @@ class Prediction:
         result = loaded_model.predict(df)
         result = np.exp(result)
         date = df.index.values
+
         new_df = pd.DataFrame()
         new_df['Date'] = date
         new_df['Predicted Sales'] = result
         print("RESULT:", result)
-        return new_df
+        # return {"date": date, "sales": result}
+        return result
