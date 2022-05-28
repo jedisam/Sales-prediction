@@ -32,7 +32,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/', methods=['GET'])
 def index():
     # Main page
-    # return render_template('index.html')
+    return render_template('index.html')
     return {
         "status": "sucess",
         "message": "Hello World"
