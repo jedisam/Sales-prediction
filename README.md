@@ -1,6 +1,18 @@
 # AB-Hypothesis-Testing
 
-<!-- ![Wordcloud](assets/CH.PNG?raw=true "workflow") -->
+<!-- Table of contents -->
+- [AB-Hypothesis-Testing](#ab-hypothesis-testing)
+  - [About](#about)
+  - [Objectives](#objectives)
+  - [Data](#data)
+  - [Repository overview](#repository-overview)
+  - [Requirements](#requirements)
+  - [Usage](#usage)
+    - [Option 1: Docker Image](#option-1-docker-image)
+    - [Options 2: Local Development](#options-2-local-development)
+  - [Contrbutors](#contrbutors)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## About
 The finance team at Rossman Pharmaceuticals wants to forecast sales in all their stores across several cities six weeks ahead of time. Managers in individual stores rely on their years of experience as well as their personal judgment to forecast sales. 
@@ -21,6 +33,9 @@ The data used for this project is a subset of the [Rossman Pharmaceuticals Sales
  
         ├── models  (contains trained model)
         ├── .github  (github workflows for CI/CD, CML)
+        ├── screenshots  (Important screenshots)
+        ├── mlruns  (contains MLflow runs)
+        ├── train (contains training scripts) 
         ├── assets  (contains assets)
         ├── data    (contains data of train, store, and test)
         ├── scripts (contains the main script)	
@@ -44,6 +59,34 @@ The data used for this project is a subset of the [Rossman Pharmaceuticals Sales
 The project requires the following:
 python3
 Pip3
+
+## Usage
+### Option 1: Docker Image
+The docker image is built on docker-hub on every push to the main branch using Github actions. It can be used to run the project locally.
+Pull docker image
+```
+docker pull jedisam/sales-forecasting
+```
+Run docker image
+```
+docker run --rm -it  -p 8501:8501/tcp jedisam/sales-forecasting
+```
+### Options 2: Local Development
+**1.Activate environement or create one:**
+```
+conda create -n <env-name> && conda activate <env-name>
+```
+**2.Install required packages**
+```
+pip install -r requirements.txt
+```
+**3.Run the app**
+```
+python3 wsgi.py
+```
+you should be able to see the dashboard\api.
+
+
 
 ## Contrbutors
 - Yididiya Samuel

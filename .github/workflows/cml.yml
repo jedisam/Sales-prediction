@@ -32,5 +32,10 @@ jobs:
           # Random Regression
           echo "### Model Metrics" > report.md
           cat train/metrics.txt >> report.md
+          echo "### Data Visualization" >> report.md
+          echo "Predicted vs. actual accuracy" >> report.md
+          cml-publish train/prediction.png --md >> report.md
+          echo "Feature Importance" >> report.md
+          cml-publish train/feature_importance.png --md >> report.md
           
           cml-send-comment report.md

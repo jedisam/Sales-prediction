@@ -1,18 +1,12 @@
+"""Flask application for the web interface."""
 # coding=utf-8
 import sys
 import os
-import shutil
-import glob
-import re
-import numpy as np
-import pandas as pd
 
 # Flask utils
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, request, render_template
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
-
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), './scripts')))
 from prediction import Prediction
@@ -31,15 +25,13 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/', methods=['GET'])
 def index():
+    """Render the index page."""
     # Main page
     return render_template('index.html')
-    return {
-        "status": "sucess",
-        "message": "Hello World"
-    }
 
 @app.route('/predict', methods=['GET', 'POST'])
 def handle_upload():
+    """Handle the upload of a file."""
     if request.method == 'POST':
         return prediction.handle_df_upload(request, secure_filename, app)
     elif request.method == 'GET':
