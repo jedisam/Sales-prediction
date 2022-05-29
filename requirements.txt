@@ -1,7 +1,6 @@
 docker==5.0.3
 dvc==2.10.2
 dvc-render==0.0.5
-gdrivefs==0.14.13
 flask
 flask_cors
 gevent
@@ -16,6 +15,7 @@ isort==5.10.1
 mlflow==1.26.0
 mysql-connector==2.2.9
 numpy==1.22.3
+oauth2client
 plotly==5.7.0
 py==1.11.0
 pydot==1.4.2
@@ -32,6 +32,7 @@ scipy==1.8.0
 scmrepo==0.0.19
 seaborn==0.11.2
 semver==2.13.0
+setuptools
 sklearn==0.0
 tqdm==4.64.0
 traitlets==5.1.1
