@@ -1,4 +1,4 @@
-name: model-smartad-decision-tree
+name: sales-prediction
 on: [push]
 jobs:
   run:
