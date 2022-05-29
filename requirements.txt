@@ -33,6 +33,7 @@ scipy==1.8.0
 scmrepo==0.0.19
 seaborn==0.11.2
 semver==2.13.0
+setuptools
 sklearn==0.0
 tqdm==4.64.0
 traitlets==5.1.1
