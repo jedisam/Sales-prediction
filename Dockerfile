@@ -1,8 +1,9 @@
-FROM ubuntu:latest
+FROM python:3.9-slim-buster
+COPY requirements.txt .
+RUN python -m pip install -r requirements.txt
 RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
-COPY . /app
 WORKDIR /app
+COPY . /app
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+EXPOSE 8501
+CMD ["python", "app.py"]
