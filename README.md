@@ -1,7 +1,7 @@
-# AB-Hypothesis-Testing
+# Rossman Pharmaceuticals Sales Prediction
 
 <!-- Table of contents -->
-- [AB-Hypothesis-Testing](#ab-hypothesis-testing)
+- [Rossman Pharmaceuticals Sales Prediction](#Rossman-Pharmaceuticals-Sales-Prediction)
   - [About](#about)
   - [Objectives](#objectives)
   - [Data](#data)
